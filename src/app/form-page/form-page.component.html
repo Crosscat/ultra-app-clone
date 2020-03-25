@@ -1,0 +1,18 @@
+<h2>form-page works!</h2>
+<form *ngIf="loaded" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label>
+      x
+      <input formControlName="x" type="text">
+    </label>
+    <label>
+      y
+      <input formControlName="y" type="text">
+    </label>
+    <label>
+      z
+      <input formControlName="z" type="text">
+    </label>
+  </fieldset>
+  <button [disabled]="form.invalid" type="submit">Fixed</button>
+</form>
